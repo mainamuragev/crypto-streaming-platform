@@ -1,26 +1,16 @@
 {
-  "name": "crypto-cdc-connector",
-  "config": {
-    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
-    "database.hostname": "pg-3d8a57ed-muragevincent39-e823.b.aivencloud.com",
-    "database.port": "14040",
-    "database.user": "avnadmin",
-    "database.password": "AVNS_eCMPC7l_2vPN3FNsiHr",
-    "database.dbname": "defaultdb",
-    "database.server.name": "crypto_pipeline",
-    "table.include.list": "public.crypto_ticker_24hr",
-    "plugin.name": "pgoutput",
-    "slot.name": "crypto_cdc_slot",
-    "publication.name": "crypto_publication",
-    "database.sslmode": "require",
-    "topic.prefix": "crypto_cdc",
-    "transforms": "unwrap",
-    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
-    "transforms.unwrap.drop.tombstones": "false",
-    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
-    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
-    "key.converter.schemas.enable": "false",
-    "value.converter.schemas.enable": "false",
-    "include.schema.changes": "false"
-  }
+    "name": "crypto-postgres-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.hostname": "postgres",
+        "database.port": "5432",
+        "database.user": "crypto_user",
+        "database.password": "your_password_here",
+        "database.dbname": "crypto_db",
+        "database.server.name": "crypto_cdc",
+        "table.include.list": "public.crypto_ticker_24hr",
+        "plugin.name": "pgoutput",
+        "slot.name": "crypto_debezium_slot",
+        "publication.name": "crypto_publication"
+    }
 }

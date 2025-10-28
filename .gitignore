@@ -77,3 +77,9 @@ grafana/plugins/
 
 # Data directory (sample data)
 data/
+
+# Environment files
+.env
+.env.local
+.env.production
+config/secrets.json
