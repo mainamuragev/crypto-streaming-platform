@@ -1,13 +1,18 @@
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+import os
+from dotenv import load_dotenv
 
-# Database configuration - replace with your actual credentials
+# Load environment variables
+load_dotenv()
+
+# Database configuration from environment
 DB_CONFIG = {
-    'host': 'localhost',
-    'port': 5432,
-    'database': 'crypto_db',
-    'user': 'crypto_user',
-    'password': 'your_password_here'
+    'host': os.getenv('POSTGRES_HOST', 'localhost'),
+    'port': int(os.getenv('POSTGRES_PORT', 5432)),
+    'database': os.getenv('POSTGRES_DB', 'crypto_db'),
+    'user': os.getenv('POSTGRES_USER', 'crypto_user'),
+    'password': os.getenv('POSTGRES_PASSWORD', '')
 }
 
 def setup_replication():

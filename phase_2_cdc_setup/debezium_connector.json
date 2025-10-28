@@ -5,7 +5,7 @@
         "database.hostname": "postgres",
         "database.port": "5432",
         "database.user": "crypto_user",
-        "database.password": "your_password_here",
+        "database.password": "${POSTGRES_PASSWORD}",
         "database.dbname": "crypto_db",
         "database.server.name": "crypto_cdc",
         "table.include.list": "public.crypto_ticker_24hr",

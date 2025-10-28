@@ -83,3 +83,10 @@ data/
 .env.local
 .env.production
 config/secrets.json
+
+# Environment files
+.env
+.env.local
+*.env
+config/secrets.json
+secrets/
