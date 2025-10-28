@@ -52,3 +52,7 @@ docker-compose.yml         # Services
 
 **Dashboard**: http://localhost:8501
 
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 161013" src="https://github.com/user-attachments/assets/8ee42f5b-d876-456d-86cc-9a9b1f04f7df" />
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 161413" src="https://github.com/user-attachments/assets/5451eb65-f4b3-483f-afa6-c94c47862227" />
+<img width="1920" height="1080" alt="Screenshot 2025-10-28 161433" src="https://github.com/user-attachments/assets/6629c46c-bfb1-4ba3-b3cb-70b014627f0b" />
+
